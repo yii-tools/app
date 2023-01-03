@@ -30,15 +30,6 @@ You can then install this project template using the following command:
 composer create-project --prefer-dist --stability=dev yii-tools/app <your project>
 ```
 
-In order to launch development web server run:
-
-```
-composer run serve
-```
-
-Now you should be able to access the application through the URL printed to console.
-Usually it is `http://localhost:8080`.
-
 ## Directory structure
 
 The application template has the following structure:
