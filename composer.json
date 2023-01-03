@@ -77,7 +77,8 @@
         "allow-plugins": {
             "yiisoft/config": true,
             "infection/extension-installer": true,
-            "codeception/c3": true
+            "codeception/c3": true,
+            "foxy/foxy": true
         }
     },
     "extra": {
