@@ -68,14 +68,14 @@ vendor/             Installed Composer packages.
 You can find configuration in `config` directory. There are multiple
 configs, and the most interesting is `params.php`. Below there are details about its sections:
 
-## Testing
+### Composer require checker
 
-The template comes with ready to use [Codeception](https://codeception.com/) configuration.
-In order to execute tests run:
+This package uses [composer-require-checker](https://github.com/maglnet/ComposerRequireChecker) to check if all dependencies are correctly defined in `composer.json`.
 
-```
-composer run serve > ./runtime/yii.log 2>&1 &
-vendor/bin/codecept run
+To run the checker, execute the following command:
+
+```shell
+./vendor/bin/composer-require-checker
 ```
 
 ### Static analysis
@@ -84,6 +84,16 @@ The code is statically analyzed with [Psalm](https://psalm.dev/). To run static 
 
 ```shell
 ./vendor/bin/psalm
+```
+
+## Acceptance, functional y unit testing
+
+The template comes with ready to use [Codeception](https://codeception.com/) configuration.
+In order to execute tests run:
+
+```
+composer run serve > ./runtime/yii.log 2>&1 &
+vendor/bin/codecept run
 ```
 
 ### CI status
