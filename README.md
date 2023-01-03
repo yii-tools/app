@@ -30,6 +30,10 @@ You can then install this project template using the following command:
 composer create-project --prefer-dist --stability=dev yii-tools/app <your project>
 ```
 
+## Configuration
+
+You can find configuration in `config` directory. There are multiple configs, and the most interesting is `params.php`.
+
 ## Directory structure
 
 The application template has the following structure:
@@ -53,11 +57,6 @@ src/                Application source code.
 tests/              A set of Codeception tests for the application.
 vendor/             Installed Composer packages.
 ```
-
-### Configuration
-
-You can find configuration in `config` directory. There are multiple
-configs, and the most interesting is `params.php`. Below there are details about its sections:
 
 ### Composer require checker
 
