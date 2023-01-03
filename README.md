@@ -54,7 +54,7 @@ tests/              A set of Codeception tests for the application.
 vendor/             Installed Composer packages.
 ```
 
-## Configuration
+### Configuration
 
 You can find configuration in `config` directory. There are multiple
 configs, and the most interesting is `params.php`. Below there are details about its sections:
