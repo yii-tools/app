@@ -91,6 +91,7 @@ vendor/bin/codecept run
 [![Code Coverage](https://codecov.io/gh/yii-tools/app/branch/master/graph/badge.svg?token=TDZ2bErTcN)](https://codecov.io/gh/yii-tools/app)
 [![static analysis](https://github.com/yii-tools/app/workflows/static%20analysis/badge.svg)](https://github.com/yii-tools/app/actions?query=workflow%3A%22static+analysis%22)
 [![type-coverage](https://shepherd.dev/github/yii-tools/app/coverage.svg)](https://shepherd.dev/github/yii-tools/app)
+[![StyleCI](https://github.styleci.io/repos/584779096/shield?branch=main)](https://github.styleci.io/repos/584779096?branch=main)
 
 ## License
 
