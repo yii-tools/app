@@ -76,7 +76,7 @@ The code is statically analyzed with [Psalm](https://psalm.dev/). To run static 
 ./vendor/bin/psalm
 ```
 
-## Acceptance, functional y unit testing
+### Testing with codeception, acceptance, functional and unit
 
 The template comes with ready to use [Codeception](https://codeception.com/) configuration.
 In order to execute tests run:
