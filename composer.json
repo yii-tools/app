@@ -1,25 +1,15 @@
 {
-    "name": "yiisoft/app",
+    "name": "yii-tools/app",
     "type": "project",
-    "description": "Yii 3 application template",
+    "description": "Application template",
     "keywords": [
-        "yii3",
-        "app"
+        "yii-tools",
+        "application",
+        "template",
+        "yii3"
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "scripts": {
-        "serve": "./yii serve",
-        "test": "codecept run",
-        "test-watch": "phpunit-watcher watch",
-        "post-update-cmd": [
-            "App\\Installer::postUpdate",
-            "App\\Installer::copyEnvFile"
-        ],
-        "post-create-project-cmd": [
-            "App\\Installer::copyEnvFile"
-        ]
-    },
     "require": {
         "php": "^8.1",
         "ext-intl": "*",
@@ -69,7 +59,6 @@
         "phpunit/phpunit": "^9.5",
         "rector/rector": "^0.15.2",
         "roave/infection-static-analysis-plugin": "^1.25",
-        "spatie/phpunit-watcher": "^1.23",
         "vimeo/psalm": "^4.30|^5.4"
     },
     "autoload": {
@@ -80,6 +69,14 @@
     "autoload-dev": {
         "psr-4": {
             "App\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "yiisoft/config": true,
+            "infection/extension-installer": true,
+            "codeception/c3": true
         }
     },
     "extra": {
@@ -142,12 +139,15 @@
             "widgets": "build/widgets.php"
         }
     },
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "yiisoft/config": true,
-            "infection/extension-installer": true,
-            "codeception/c3": true
-        }
+    "scripts": {
+        "post-create-project-cmd": [
+            "App\\Installer::copyEnvFile"
+        ],
+        "post-update-cmd": [
+            "App\\Installer::postUpdate",
+            "App\\Installer::copyEnvFile"
+        ],
+        "serve": "./yii serve",
+        "test": "codecept run"
     }
 }
