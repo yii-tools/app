@@ -41,3 +41,6 @@ c3.php
 
 # Composer
 composer.lock
+
+#  yiisoft/config
+/config/.merge-plan.php

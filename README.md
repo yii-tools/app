@@ -32,7 +32,7 @@ composer create-project --prefer-dist --stability=dev yii-tools/app <your projec
 
 ## Configuration
 
-You can find configuration in [config](/config) directory. There are multiple configs, and the most interesting is `params.php`.
+You can find configuration in [config](/config) directory. There are multiple configs, and the most interesting is [params.php](/config/build/params.php).
 
 ## Directory structure
 
