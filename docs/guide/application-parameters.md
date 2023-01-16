@@ -1,4 +1,4 @@
-## Customizing the parameters of your application
+## Customizing application parameters
 
 This class allows you to globally configure some important parameters of your application, such as `name` and `charset`, you could also add any parameter you need.
 
