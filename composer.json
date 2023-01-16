@@ -89,56 +89,33 @@
             "source-directory": "config"
         },
         "config-plugin": {
-            "common": "common/*.php",
-            "params": [
-                "build/params.php"
+            "bootstrap": "?bootstrap.php",
+            "bootstrap-console": [
+                "$bootstrap"
             ],
+            "bootstrap-web": [
+                "$bootstrap"
+            ],
+            "common": "common/*.php",
+            "console": [
+                "$common",
+                "?console/*.php"
+            ],
+            "events": "?events.php",
+            "events-console": [
+                "$events"
+            ],
+            "events-web": [
+                "$events"
+            ],
+            "params": "params.php",
+            "providers": "?providers.php",
+            "routes": "routes.php",
             "web": [
                 "$common",
                 "web/*.php"
             ],
-            "console": [
-                "$common",
-                "console/*.php"
-            ],
-            "events": "build/events.php",
-            "events-console": [
-                "$events",
-                "build/console/events.php"
-            ],
-            "events-web": [
-                "$events",
-                "build/web/events.php"
-            ],
-            "providers": "build/providers.php",
-            "providers-console": [
-                "$providers",
-                "build/console/providers.php"
-            ],
-            "providers-web": [
-                "$providers",
-                "build/web/providers.php"
-            ],
-            "delegates": "build/delegates.php",
-            "delegates-console": [
-                "$delegates",
-                "build/console/delegates.php"
-            ],
-            "delegates-web": [
-                "$delegates",
-                "build/web/delegates.php"
-            ],
-            "routes": "build/routes.php",
-            "bootstrap": "build/bootstrap.php",
-            "bootstrap-console": [
-                "$bootstrap",
-                "build/console/bootstrap.php"
-            ],
-            "bootstrap-web": [
-                "$bootstrap",
-                "build/web/bootstrap.php"
-            ],
-            "widgets": "build/widgets.php"
+            "widgets": "widgets.php"
         }
     },
     "scripts": {

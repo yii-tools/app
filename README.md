@@ -58,7 +58,31 @@ tests/              A set of Codeception tests for the application.
 vendor/             Installed Composer packages.
 ```
 
-### Composer require checker
+## Using SubFolder Middleware for URL Routing
+
+If you want to use subfolder middleware for URL routing, you need to adjust `config/params.php` file.
+
+For our example let's assume that web server root is pointing to the all projects root. There is `yii3` project with its `yii3/public` directory that should be accessed as `http://localhost/yii3/public`.
+
+> Note: While being a common practice for local development, it is recommended to prefer separate hosts for separate projects pointint directly to `public` directory.
+
+Here's how `config/params.php` should be adjusted:
+
+```php
+'app' => [
+    'prefix' => '/yii3/public',
+],
+```
+
+To test it in action run the following command:
+
+```bash
+php -S 127.0.0.1:8080 <all projects root path>
+```
+
+Now you can use `http://localhost:8080/yii3/public` to access the application.
+
+## Composer require checker
 
 This package uses [composer-require-checker](https://github.com/maglnet/ComposerRequireChecker) to check if all dependencies are correctly defined in `composer.json`.
 
@@ -68,7 +92,7 @@ To run the checker, execute the following command:
 ./vendor/bin/composer-require-checker
 ```
 
-### Static analysis
+## Static analysis
 
 The code is statically analyzed with [Psalm](https://psalm.dev/). To run static analysis:
 
@@ -76,7 +100,7 @@ The code is statically analyzed with [Psalm](https://psalm.dev/). To run static 
 ./vendor/bin/psalm
 ```
 
-### Testing with codeception, acceptance, functional and unit
+## Testing with codeception, acceptance, functional and unit
 
 The template comes with ready to use [Codeception](https://codeception.com/) configuration.
 In order to execute tests run:
@@ -85,7 +109,7 @@ In order to execute tests run:
 vendor/bin/codecept run
 ```
 
-### CI status
+## CI status
 
 [![build](https://github.com/yii-tools/app/workflows/build/badge.svg)](https://github.com/yii-tools/app/actions)
 [![codecov](https://codecov.io/gh/yii-tools/app/branch/main/graph/badge.svg?token=L2M7HL7OKI)](https://codecov.io/gh/yii-tools/app)
