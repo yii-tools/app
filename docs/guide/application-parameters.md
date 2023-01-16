@@ -1,8 +1,8 @@
 ## Customizing application parameters
 
-This [ApplicationParameters.php](https://github.com/yiisoft/app/blob/master/src/ApplicationParameters.php) allows you to globally configure some important parameters of your application, such as `name` and `charset`, you could also add any parameter you need.
+This [ApplicationParameters.php](https://github.com/yii-tools/app/blob/main/src/ApplicationParameters.php) allows you to globally configure some important parameters of your application, such as `name` and `charset`, you could also add any parameter you need.
 
-The parameters are defined in the file [config/params.php](https://github.com/yiisoft/app/blob/master/config/params.php) and are available in the config files
+The parameters are defined in the file [config/params.php](https://github.com/yii-tools/app/blob/main/config/params.php) and are available in the config files
 `$params[parameter]`. For example, if you want to add a parameter called `adminEmail`, you can do it like this:
 
 ```php
