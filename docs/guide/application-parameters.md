@@ -3,7 +3,7 @@
 This [ApplicationParameters.php](https://github.com/yii-tools/app/blob/main/src/ApplicationParameters.php) allows you to globally configure some important parameters of your application, such as `name` and `charset`, you could also add any parameter you need.
 
 The parameters are defined in the file [config/params.php](https://github.com/yii-tools/app/blob/main/config/params.php) and are available in the config files
-`$params[parameter]`. For example, if you want to add a parameter called `adminEmail`, you can do it like this:
+`$params[parameter]`. For example, if you want to add a parameter called `email`, you can do it like this:
 
 ```php
 <?php
@@ -12,12 +12,12 @@ declare(strict_types=1);
     
 return [
     'app' => [
-        'adminEmail' => 'admin@example.com',
+        'email' => 'admin@example.com',
     ],
 ];
 ```
 
-Add the method `email()` and `getAdminEmail()` to the `ApplicationParameters::class`:
+Add the method `email()` and `getEmail()` to the `ApplicationParameters::class`:
 
 ```php
 <?php
@@ -28,8 +28,8 @@ namespace App;
     
 final class ApplicationParameters
 {
-    private string $adminEmail = '';
     private string $charset = 'UTF-8';
+    private string $email = '';
     private string $name = 'My Project';
     
     public function charset(string $value): self
@@ -47,17 +47,17 @@ final class ApplicationParameters
 
         return $new;
     }
-
-    public function getAdminEmail(): string
-    {
-        return $this->adminEmail;
-    }
-    
+   
     public function getCharset(): string
     {
         return $this->charset;
     }
-    
+
+    public function getEmail(): string
+    {
+        return $this->adminEmail;
+    }
+
     public function getName(): string
     {
         return $this->name;
@@ -109,7 +109,7 @@ final class MyAction
 {
     public function index(ApplicationParameters $applicationParameters): ResponseInterface
     {
-        $adminEmail = $applicationParameters->getAdminEmail();
+        $email = $applicationParameters->getEmail();
         // ...
     }
 }
