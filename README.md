@@ -42,6 +42,8 @@ Now you should be able to access the application through the URL printed to cons
 
 You can find configuration in [config](/config) directory. There are multiple configs, and the most interesting is [params.php](/config/params.php).
 
+If you want to configure your app **multiple apps as subfolders**, read [this](/docs/multiple-apps.md).
+
 ## Directory structure
 
 The application template has the following structure:
@@ -66,31 +68,7 @@ tests/              A set of Codeception tests for the application.
 vendor/             Installed Composer packages.
 ```
 
-## Using SubFolder Middleware for URL Routing
-
-If you want to use subfolder middleware for URL routing, you need to adjust `config/params.php` file.
-
-For our example let's assume that web server root is pointing to the all projects root. There is `yii3` project with its `yii3/public` directory that should be accessed as `http://localhost/yii3/public`.
-
-> Note: While being a common practice for local development, it is recommended to prefer separate hosts for separate projects pointint directly to `public` directory.
-
-Here's how `config/params.php` should be adjusted:
-
-```php
-'app' => [
-    'prefix' => '/yii3/public',
-],
-```
-
-To test it in action run the following command:
-
-```bash
-php -S 127.0.0.1:8080 <all projects root path>
-```
-
-Now you can use `http://localhost:8080/yii3/public` to access the application.
-
-## Composer require checker
+## Checking dependencies
 
 This package uses [composer-require-checker](https://github.com/maglnet/ComposerRequireChecker) to check if all dependencies are correctly defined in `composer.json`.
 
@@ -108,10 +86,9 @@ The code is statically analyzed with [Psalm](https://psalm.dev/). To run static 
 ./vendor/bin/psalm
 ```
 
-## Testing with codeception, acceptance, functional and unit
+## Testing
 
-The template comes with ready to use [Codeception](https://codeception.com/) configuration.
-In order to execute tests run:
+The code is tested with [Codeception](https://codeception.com/). To run tests:
 
 ```
 vendor/bin/codecept run
