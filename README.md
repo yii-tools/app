@@ -40,7 +40,7 @@ Now you should be able to access the application through the URL printed to cons
 
 ## Configuration
 
-If you want to customize your **app**, read [docs](/docs/config.md).
+If you want to customize your **app**, read the [docs](/docs/config.md).
 
 ## Directory structure
 
