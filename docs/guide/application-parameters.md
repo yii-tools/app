@@ -17,7 +17,7 @@ return [
 ];
 ```
 
-Add the method `email` and `getAdminEmail()` to the `ApplicationParameters::class`:
+Add the method `email()` and `getAdminEmail()` to the `ApplicationParameters::class`:
 
 ```php
 <?php
