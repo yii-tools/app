@@ -11,9 +11,55 @@ declare(strict_types=1);
 
 return [
     'app' => [
-        'adminEmail' => 'admind@example.com',
+        'adminEmail' => 'admin@example.com',
     ],
 ];
+```
+
+Add the method `getAdminEmail()` to the `ApplicationParameters::class` class:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App;
+
+final class ApplicationParameters
+{
+    private string $adminEmail = '';
+    private string $charset = 'UTF-8';
+    private string $name = 'My Project';
+
+    public function charset(string $value): self
+    {
+        $new = clone $this;
+        $new->charset = $value;
+        return $new;
+    }
+
+    public function getAdminEmail(): string
+    {
+        return $this->adminEmail;
+    }
+
+    public function getCharset(): string
+    {
+        return $this->charset;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function name(string $value): self
+    {
+        $new = clone $this;
+        $new->name = $value;
+        return $new;
+    }
+}
 ```
 
 You can then access this parameter in your controllers or actions like this:
