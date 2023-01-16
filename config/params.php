@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 use App\ApplicationParameters;
 use App\Command\Hello;
+use Psr\Log\LogLevel;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\Definitions\Reference;
 use Yiisoft\ErrorHandler\Middleware\ErrorCatcher;
 use Yiisoft\I18n\Locale;
+use Yiisoft\Log\Target\File\FileTarget;
 use Yiisoft\Router\CurrentRoute;
 use Yiisoft\Router\Middleware\Router;
 use Yiisoft\Router\UrlGeneratorInterface;
@@ -17,12 +19,14 @@ use Yiisoft\Translator\TranslatorInterface;
 use Yiisoft\Yii\View\CsrfViewInjection;
 
 return [
+    // Application parameters
     'app' => [
         'charset' => 'UTF-8',
         'locale' => 'en',
         'name' => 'My Project',
     ],
 
+    // Internationalization (i18n)
     'locale' => [
         'locales' => ['en' => 'en-US', 'ru' => 'ru-RU'],
         'ignoredRequests' => [
@@ -30,6 +34,7 @@ return [
         ],
     ],
 
+    // Middlewares stack
     'middlewares' => [
         ErrorCatcher::class,
         SessionMiddleware::class,
@@ -37,6 +42,7 @@ return [
         Router::class,
     ],
 
+    // Aliases
     'yiisoft/aliases' => [
         'aliases' => [
             '@root' => dirname(__DIR__, 1),
@@ -54,12 +60,43 @@ return [
         ],
     ],
 
+    // Log
+    'yiisoft/log' => [
+        'targets' => [
+            FileTarget::class,
+        ],
+    ],
+
+    // Log target file
+    'yiisoft/log-target-file' => [
+        'fileTarget' => [
+            'file' => '@runtime/logs/app.log',
+            'levels' => [
+                LogLevel::EMERGENCY,
+                LogLevel::ERROR,
+                LogLevel::WARNING,
+                LogLevel::INFO,
+                LogLevel::DEBUG,
+            ],
+            'dirMode' => 0755,
+            'fileMode' => null,
+        ],
+        'fileRotator' => [
+            'maxFileSize' => 10240,
+            'maxFiles' => 5,
+            'fileMode' => null,
+            'compressRotatedFiles' => false,
+        ],
+    ],
+
+    // Translator
     'yiisoft/translator' => [
         'locale' => 'en',
         'fallbackLocale' => 'en',
         'defaultCategory' => 'app',
     ],
 
+    // View
     'yiisoft/view' => [
         'basePath' => '@views',
         'parameters' => [
@@ -73,12 +110,14 @@ return [
         ],
     ],
 
+    // Yii view
     'yiisoft/yii-view' => [
         'injections' => [
             Reference::to(CsrfViewInjection::class),
         ],
     ],
 
+    // Yii console
     'yiisoft/yii-console' => [
         'commands' => [
             'hello' => Hello::class,
