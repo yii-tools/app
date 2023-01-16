@@ -6,12 +6,39 @@ For our example let's assume that web server root is pointing to the all project
 
 > Note: While being a common practice for local development, it is recommended to prefer separate hosts for separate projects pointint directly to `public` directory.
 
-Here's how `config/params.php` should be adjusted:
+Here's how `config/params.php` should be adjusted, add prefix to `app` config:
 
 ```php
 'app' => [
     'prefix' => '/yii3/public',
 ],
+```
+
+Now defined config/common/subfolder.php will be used for URL routing.
+
+```php
+?php
+
+declare(strict_types=1);
+
+use Yiisoft\Aliases\Aliases;
+use Yiisoft\Router\UrlGeneratorInterface;
+use Yiisoft\Yii\Middleware\SubFolder;
+
+return [
+    SubFolder::class => static function (
+        Aliases $aliases,
+        UrlGeneratorInterface $urlGenerator
+    ) use ($params) {
+        $aliases->set('@baseUrl', $params['app']['prefix']);
+
+        return new SubFolder(
+            $urlGenerator,
+            $aliases,
+            $params['app']['prefix'] === '/' ? null : $params['app']['prefix'],
+        );
+    },
+];
 ```
 
 To test it in action run the following command:
