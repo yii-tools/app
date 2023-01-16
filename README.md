@@ -40,7 +40,7 @@ Now you should be able to access the application through the URL printed to cons
 
 ## Configuration
 
-You can find configuration in [config](/config) directory. There are multiple configs, and the most interesting is [params.php](/config/build/params.php).
+You can find configuration in [config](/config) directory. There are multiple configs, and the most interesting is [params.php](/config/params.php).
 
 ## Directory structure
 
