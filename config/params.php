@@ -82,10 +82,10 @@ return [
             'fileMode' => null,
         ],
         'fileRotator' => [
-        'maxFileSize' => 10240,
-        'maxFiles' => 5,
-        'fileMode' => null,
-        'compressRotatedFiles' => false,
+            'maxFileSize' => 10240,
+            'maxFiles' => 5,
+            'fileMode' => null,
+            'compressRotatedFiles' => false,
         ],
     ],
 
