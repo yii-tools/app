@@ -7,3 +7,4 @@ If you want to configure your application you can see the corresponding guide:
 - [Internationalization (i18n)](/docs/guide/i18n.md)
 - [Logging](/docs/guide/logger.md)
 - [Multiple apps with sub folder middleware](/docs/guide/multiple-apps.md)
+- [Routing](/docs/guide/routing.md)
