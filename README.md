@@ -38,10 +38,6 @@ composer run serve
 
 Now you should be able to access the application through the URL printed to console. Usually it is http://localhost:8080.
 
-## Configuration
-
-If you want to customize your **app**, read the [docs](/docs/config.md).
-
 ## Directory structure
 
 The application template has the following structure directory:
@@ -71,6 +67,10 @@ root
 |    └── ApplicationParameters.php  Application parameters.
 |    └── Installer.php              Installer.
 ```
+
+## Configuration
+
+If you want to customize your **app**, read the [docs](/docs/config.md).
 
 ## Checking dependencies
 
