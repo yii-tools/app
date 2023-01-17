@@ -40,7 +40,7 @@ return [
 ];
 ```
 
-The `Application` class is a [PSR-15](https://www.php-fig.org/psr/psr-15/) middleware. It is used to dispatch the middleware stack and handle the request. The `Application` class is configured with a `dispatcher` and a `fallbackHandler`. The `dispatcher` is a [PSR-15](https://www.php-fig.org/psr/psr-15/) middleware that dispatches the middleware stack. The `fallbackHandler` is a [PSR-15](https://www.php-fig.org/psr/psr-15/) middleware that handles the request when no other middleware can do so.
+The `Application` class is a [PSR-15](https://www.php-fig.org/psr/psr-15/) middleware. It is used to dispatch the middleware stack and handle the request. The `Application` class is configured with a `dispatcher` and a `fallbackHandler`. The `dispatcher` is a [PSR-15](https://www.php-fig.org/psr/psr-15/) middleware that dispatches the middleware stack. The `fallbackHandler` represents the handler that will be called if no other handler is found.
 
 The `Locale` class is a [PSR-15](https://www.php-fig.org/psr/psr-15/) middleware that sets the locale based on the request. It is configured with a list of supported locales and a list of ignored requests. The `Locale` middleware is used to set the locale for the request. It is configured with a list of supported locales and a list of ignored requests.
 
