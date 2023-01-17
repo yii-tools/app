@@ -88,27 +88,37 @@
             "source-directory": "config"
         },
         "config-plugin": {
-            "bootstrap": "?bootstrap.php",
+            "bootstrap": [
+                "?bootstrap.php"
+            ],
             "bootstrap-console": [
                 "$bootstrap"
             ],
             "bootstrap-web": [
                 "$bootstrap"
             ],
-            "common": "common/*.php",
+            "common": [
+                "common/*.php"
+            ],
             "console": [
                 "$common",
                 "?console/*.php"
             ],
-            "events": "?events.php",
+            "events": [
+                "?events.php"
+            ],
             "events-console": [
                 "$events"
             ],
             "events-web": [
                 "$events"
             ],
-            "params": "params.php",
-            "providers": "?providers.php",
+            "params": [
+                "params.php"
+            ],
+            "providers": [
+                "?providers.php"
+            ],
             "routes": "routes.php",
             "web": [
                 "$common",
@@ -125,6 +135,8 @@
             "App\\Installer::postUpdate",
             "App\\Installer::copyEnvFile"
         ],
+        "check-dependencies": "composer-require-checker",
+        "psalm": "psalm",
         "serve": "./yii serve",
         "test": "codecept run"
     }
