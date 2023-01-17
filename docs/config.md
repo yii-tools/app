@@ -8,3 +8,4 @@ If you want to configure your application you can see the corresponding guide:
 - [Logging](/docs/guide/logger.md)
 - [Multiple apps with sub folder middleware](/docs/guide/multiple-apps.md)
 - [Routing](/docs/guide/routing.md)
+- [Translator](/docs/guide/translator.md)
