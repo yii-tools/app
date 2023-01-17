@@ -79,7 +79,7 @@ This package uses [composer-require-checker](https://github.com/maglnet/Composer
 To run the checker, execute the following command:
 
 ```shell
-composer check-dependencies
+composer run check-dependencies
 ```
 
 ## Static analysis
@@ -87,7 +87,7 @@ composer check-dependencies
 The code is statically analyzed with [Psalm](https://psalm.dev/). To run static analysis:
 
 ```shell
-composer psalm
+composer run psalm
 ```
 
 ## Testing
@@ -95,7 +95,7 @@ composer psalm
 The code is tested with [Codeception](https://codeception.com/). To run tests:
 
 ```
-composer test
+composer run test
 ```
 
 ## CI status
