@@ -38,33 +38,39 @@ composer run serve
 
 Now you should be able to access the application through the URL printed to console. Usually it is http://localhost:8080.
 
+## Directory structure
+
+The application template has the following structure directory:
+
+```text
+root
+├── config                          Configuration files.
+│   └── common                      Common configuration files.
+│   └── web                         Web configuration files.
+│   └── params.php                  Application parameters.
+│   └── routes.php                  Application routes.
+|   └── widgets.php                 Widgets configuration.
+├── public                          Files publically accessible from the Internet.
+│   └── assets                      Published assets.
+│   └── index.php                   Entry script.
+├── resources                       Application resources.
+│   └── assets                      Custom assets.
+│   └── messages                    Message translations.
+│   └── layout                      Layout templates.
+│   └── view                        View templates.
+├── runtime                         Files generated during runtime.
+├── src                             Application source code.
+│    └── Asset                      Asset bundle definitions.
+│    └── Command                    Console commands.
+│    └── Controller                 Web controller classes.
+│    └── Handler                    Handlers for events.
+|    └── ApplicationParameters.php  Application parameters.
+|    └── Installer.php              Installer.
+```
+
 ## Configuration
 
 If you want to customize your **app**, read the [docs](/docs/config.md).
-
-## Directory structure
-
-The application template has the following structure:
-
-```
-config/             Configuration files.
-docs/               Documentation.
-public/             Files publically accessible from the Internet.
-    assets/         Published assets.
-    index.php       Entry script.
-resources/          Application resources.
-    assets/         Asset bundle resources.
-    messages/       Message translations.
-    view/           View templates.
-runtime/            Files generated during runtime.
-src/                Application source code.
-    Asset/          Asset bundle definitions.
-    Command/        Console commands.
-    Controller/     Web controller classes.
-    Handler/        Handlers for events.
-tests/              A set of Codeception tests for the application.
-vendor/             Installed Composer packages.
-```
 
 ## Checking dependencies
 
