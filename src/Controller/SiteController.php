@@ -7,6 +7,9 @@ namespace App\Controller;
 use Psr\Http\Message\ResponseInterface;
 use Yiisoft\Yii\View\ViewRenderer;
 
+/**
+ * This SiteController class is used to handle site actions.
+ */
 final class SiteController
 {
     public function __construct(private ViewRenderer $viewRenderer)

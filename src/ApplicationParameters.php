@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App;
 
+/**
+ * This ApplicationParameters class is used to store application parameters.
+ */
 final class ApplicationParameters
 {
     private string $charset = 'UTF-8';

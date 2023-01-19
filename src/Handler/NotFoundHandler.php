@@ -12,6 +12,9 @@ use Yiisoft\Router\UrlGeneratorInterface;
 use Yiisoft\Router\CurrentRoute;
 use Yiisoft\Yii\View\ViewRenderer;
 
+/**
+ * This NotFoundHandler class is used to handle 404 error.
+ */
 final class NotFoundHandler implements RequestHandlerInterface
 {
     public function __construct(
