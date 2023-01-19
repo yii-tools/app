@@ -8,6 +8,9 @@ use FilesystemIterator as FSIterator;
 use RecursiveDirectoryIterator as DirIterator;
 use RecursiveIteratorIterator as RIterator;
 
+/**
+ * This Installer class is used to handle post-update composer scripts.
+ */
 final class Installer
 {
     /**
