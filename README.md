@@ -15,14 +15,11 @@
 
 ## Requirements
 
-The minimum requirement by this project template that your Web server supports PHP 8.1.
+The minimun version of PHP required by this package is PHP 8.1.
+
+For install this package, you need [composer](https://getcomposer.org/).
 
 ## Installation
-
-You'll need at least PHP 8.1.
-
-If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
-at [getcomposer.org](http://getcomposer.org/doc/00-intro.md).
 
 You can then install this project template using the following command:
 
