@@ -2,7 +2,7 @@
     <a href="https://github.com/yii-tools/app" target="_blank">
         <img src="https://avatars.githubusercontent.com/u/121752654?s=200&v=4" height="100px">
     </a>
-    <h1 align="center">Application template</h1>
+    <h1 align="center">Application Template for YiiFramework v. 3.0.</h1>
     <h3 align="center">The best for rapidly creating projects.</h3>
     <br>
 </p>

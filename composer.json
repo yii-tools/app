@@ -1,7 +1,7 @@
 {
     "name": "yii-tools/app",
     "type": "project",
-    "description": "Application template",
+    "description": "Application Template for YiiFramework v. 3.0.",
     "keywords": [
         "yii-tools",
         "application",
