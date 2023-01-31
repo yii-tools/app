@@ -10,7 +10,7 @@ return [
     Locale::class => [
         'class' => Locale::class,
         '__construct()' => [
-            $params['app']['locale'],
+            $params['locale']['locale'],
         ],
     ],
 ];

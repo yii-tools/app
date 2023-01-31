@@ -7,7 +7,7 @@ use Yiisoft\Html\Html;
 use Yiisoft\I18n\Locale;
 
 /**
- * @var App\ApplicationParameters $applicationParameters
+ * @var App\Service\ParameterService $parameterService
  * @var Yiisoft\Aliases\Aliases $aliases
  * @var Yiisoft\Assets\AssetManager $assetManager
  * @var string $content
@@ -30,7 +30,7 @@ $this->addJsVars($assetManager->getJsVars());
 <?php $this->beginPage()?>
     <!DOCTYPE html>
     <html lang="<?= Html::encode($locale->language()) ?>">
-        <?= $this->render('_head', ['applicationParameters' => $applicationParameters]) ?>
+        <?= $this->render('_head', ['parameterService' => $parameterService]) ?>
         <?= $this->render('_header') ?>
         <body>
             <?php $this->beginBody() ?>
