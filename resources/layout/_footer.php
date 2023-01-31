@@ -4,12 +4,16 @@ declare(strict_types=1);
 
 use Yiisoft\Html\Html;
 
+/**
+ * @var App\Service\ParameterService $parameterService
+ */
+
 ?>
 
 <div class="footer">
     <div class="footer_copyright">
         <a href="https://www.yiiframework.com/" target="_blank" rel="noopener">
-            © <?= date('Y') ?>  <?= Html::encode($applicationParameters->getName()) ?>
+            © <?= date('Y') ?>  <?= Html::encode($parameterService->get('app.name')) ?>
         </a>
     </div>
     <div class="footer_icons">

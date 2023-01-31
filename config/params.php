@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use App\ApplicationParameters;
 use App\Command\Hello;
+use App\Service\ParameterService;
 use Psr\Log\LogLevel;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Assets\AssetManager;
@@ -19,15 +19,9 @@ use Yiisoft\Translator\TranslatorInterface;
 use Yiisoft\Yii\View\CsrfViewInjection;
 
 return [
-    // Application parameters
-    'app' => [
-        'charset' => 'UTF-8',
-        'locale' => 'en',
-        'name' => 'My Project',
-    ],
-
     // Internationalization (i18n)
     'locale' => [
+        'locale' => 'en',
         'locales' => ['en' => 'en-US', 'ru' => 'ru-RU'],
         'ignoredRequests' => [
             '/debug**',
@@ -101,10 +95,10 @@ return [
         'basePath' => '@views',
         'parameters' => [
             'aliases' => Reference::to(Aliases::class),
-            'applicationParameters' => Reference::to(ApplicationParameters::class),
             'assetManager' => Reference::to(AssetManager::class),
             'currentRoute' => Reference::to(CurrentRoute::class),
             'locale' => Reference::to(Locale::class),
+            'parameterService' => Reference::to(ParameterService::class),
             'translator' => Reference::to(TranslatorInterface::class),
             'urlGenerator' => Reference::to(UrlGeneratorInterface::class),
         ],

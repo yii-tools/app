@@ -20,6 +20,7 @@
         "symfony/console": "^6.0",
         "vlucas/phpdotenv": "^5.3",
         "yiisoft/aliases": "^2.0",
+        "yiisoft/arrays": "^3.0",
         "yiisoft/assets": "^3.0",
         "yiisoft/cache": "^2.0",
         "yiisoft/cache-file": "^2.0",
@@ -115,6 +116,9 @@
             ],
             "params": [
                 "params.php"
+            ],
+            "parameters": [
+                "parameters.php"
             ],
             "providers": [
                 "?providers.php"

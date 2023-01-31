@@ -2,17 +2,16 @@
 
 declare(strict_types=1);
 
-/**
- * @var WebView $this
- * @var TranslatorInterface $translator
- * @var ApplicationParameters $applicationParameters
- */
-
-use App\ApplicationParameters;
 use Yiisoft\Translator\TranslatorInterface;
 use Yiisoft\View\WebView;
 
-$this->setTitle($applicationParameters->getName());
+/**
+ * @var \App\Service\ParameterService $parameterService
+ * @var TranslatorInterface $translator
+ * @var WebView $this
+ */
+
+$this->setTitle($parameterService->get('app.name'));
 ?>
 
 <div class="text-center">
