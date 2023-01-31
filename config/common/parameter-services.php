@@ -12,5 +12,5 @@ return [
         '__construct()' => [
             $config->get('parameters'),
         ],
-    ]
+    ],
 ];
