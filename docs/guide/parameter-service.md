@@ -2,7 +2,7 @@
 
 This [ParameterService.php](/src/Service/ParameterService.php) allows you to globally configure some important parameters of your application, such as `name` and `charset`, you could also add any parameter you need.
 
-The parameters are defined in the file [config/parameters.php](/config/parameters.php) and avaible in the app, in controllers, actions as a dependency and in the views.
+The parameters are defined in the file [config/parameters.php](/config/parameters.php) and avaible in controllers, actions, view component as a dependency.
 
 file: config/parameters.php
 ```php

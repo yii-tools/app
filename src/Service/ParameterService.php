@@ -41,7 +41,7 @@ final class ParameterService
      *
      * @return mixed
      */
-    public function get(string $key, mixed $default = null)
+    public function get(string $key, mixed $default = null): mixed
     {
         return ArrayHelper::getValueByPath($this->parameters, $key, $default);
     }
