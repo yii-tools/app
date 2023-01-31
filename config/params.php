@@ -49,7 +49,7 @@ return [
             '@assets' => '@root/public/assets',
             '@assetsUrl' => '@baseUrl/assets',
             '@baseUrl' => '/',
-            '@layout' => '@resources/views/layout',
+            '@layout' => '@resources/layout',
             '@messages' => '@resources/messages',
             '@npm' => '@root/node_modules',
             '@public' => '@root/public',
@@ -115,6 +115,8 @@ return [
         'injections' => [
             Reference::to(CsrfViewInjection::class),
         ],
+        'layout' => '@layout/main',
+        'viewPath' => '@views',
     ],
 
     // Yii console
