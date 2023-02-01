@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 use App\Command\Hello;
-use App\Service\ParameterService;
 use Psr\Log\LogLevel;
+use Yii\Service\ParameterService;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\Definitions\Reference;

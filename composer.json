@@ -19,6 +19,7 @@
         "psr/http-server-handler": "^1.0",
         "symfony/console": "^6.0",
         "vlucas/phpdotenv": "^5.3",
+        "yii-tools/service": "^1.0@dev",
         "yiisoft/aliases": "^2.0",
         "yiisoft/arrays": "^3.0",
         "yiisoft/assets": "^3.0",
@@ -89,6 +90,7 @@
             "source-directory": "config"
         },
         "config-plugin": {
+            "application-params": "?application-params.php",
             "bootstrap": [
                 "?bootstrap.php"
             ],
@@ -116,9 +118,6 @@
             ],
             "params": [
                 "params.php"
-            ],
-            "parameters": [
-                "parameters.php"
             ],
             "providers": [
                 "?providers.php"
