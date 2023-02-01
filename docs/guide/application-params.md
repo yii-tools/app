@@ -1,10 +1,10 @@
-## Customizing the application parameters
+## Application parameters
 
-This [ParameterService.php](/src/Service/ParameterService.php) allows you to globally configure some important parameters of your application, such as `name` and `charset`, you could also add any parameter you need.
+This [ParameterService.php](https://github.com/yii-tools/service/blob/main/src/ParameterService.php) allows you to globally configure some important parameters of your application, such as `name` and `charset`, you could also add any parameter you need.
 
-The parameters are defined in the file [config/parameters.php](/config/parameters.php) and avaible in controllers, actions, view component as a dependency.
+The parameters are defined in the file [config/application-params.php](/config/application-params.php) and avaible in the app, in controllers, actions as a dependency and in the views.
 
-file: config/parameters.php
+file: config/application-params.php
 ```php
 <?php
     
@@ -14,27 +14,6 @@ return [
     'app' => [
         'email' => 'admin@example.com',
     ],
-];
-```
-
-In your config [config/common/parameter-services.php](/config/common/parameter-services.php) you can define the parameters as a service.
-
-```php
-<?php
-
-declare(strict_types=1);
-
-use App\Service\ParameterService;
-
-/** @var \Yiisoft\Config\Config $config */
-
-return [
-    ParameterService::class => [
-        'class' => ParameterService::class,
-        '__construct()' => [
-            $config->get('parameters'),
-        ],
-    ]
 ];
 ```
 
