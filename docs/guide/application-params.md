@@ -1,6 +1,6 @@
-## Customizing the application parameters
+## Application parameters
 
-This [ParameterService.php](/src/Service/ParameterService.php) allows you to globally configure some important parameters of your application, such as `name` and `charset`, you could also add any parameter you need.
+This [ParameterService.php](https://github.com/yii-tools/service/blob/main/src/ParameterService.php) allows you to globally configure some important parameters of your application, such as `name` and `charset`, you could also add any parameter you need.
 
 The parameters are defined in the file [config/application-params.php](/config/application-params.php) and avaible in the app, in controllers, actions as a dependency and in the views.
 
