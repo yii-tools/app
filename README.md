@@ -61,7 +61,6 @@ root
 │    └── Command                    Console commands.
 │    └── Controller                 Web controller classes.
 │    └── Handler                    Handlers for events.
-|    └── ApplicationParameters.php  Application parameters.
 |    └── Installer.php              Installer.
 ```
 
