@@ -32,13 +32,9 @@ $this->addJsVars($assetManager->getJsVars());
     <html lang="<?= Html::encode($locale->language()) ?>">
         <?= $this->render('_head', ['parameterService' => $parameterService]) ?>
         <?= $this->render('_header') ?>
-        <body>
+        <body class="flex flex-col h-screen" style="justify-content: space-between;">
             <?php $this->beginBody() ?>
-                <div class="content">
-                    <div class="content_i">
-                        <?= $content ?>
-                    </div>
-                </div>
+                <?= $content ?>
                 <?= $this->render('_footer') ?>
             <?php $this->endBody() ?>
         </body>
