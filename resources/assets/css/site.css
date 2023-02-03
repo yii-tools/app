@@ -2,9 +2,11 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
 html {
     height: 100%;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -23,24 +25,10 @@ body {
     box-shadow: 0 0 24px #f4f4f4;
     text-align: center;
 }
-.header svg {
-    height: 48px;
-}
 
-.content {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-}
-.content_i {
-    flex-grow: 1;
-    padding: 24px 5%;
-}
-.content a {
-    color: #00617b;
-}
-.content a:hover {
-    color: #1191b3;
+.header svg {
+    display: inline-block !important;
+    height: 48px;
 }
 
 .footer {
