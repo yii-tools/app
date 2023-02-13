@@ -22,7 +22,7 @@
         "yii-tools/service": "^1.0@dev",
         "yiisoft/aliases": "^2.0",
         "yiisoft/arrays": "^3.0",
-        "yiisoft/assets": "^3.0",
+        "yiisoft/assets": "^4.0",
         "yiisoft/cache": "^2.0",
         "yiisoft/cache-file": "^2.0",
         "yiisoft/config": "^1.1",
