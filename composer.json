@@ -20,36 +20,36 @@
         "symfony/console": "^6.0",
         "vlucas/phpdotenv": "^5.3",
         "yii-tools/service": "^1.0@dev",
-        "yiisoft/aliases": "^2.0",
+        "yiisoft/aliases": "^2.0|^3.0",
         "yiisoft/arrays": "^3.0",
-        "yiisoft/assets": "^3.0",
-        "yiisoft/cache": "^2.0",
-        "yiisoft/cache-file": "^2.0",
-        "yiisoft/config": "^1.1",
-        "yiisoft/csrf": "^1.2",
-        "yiisoft/data-response": "^1.0",
-        "yiisoft/definitions": "^3.0",
+        "yiisoft/assets": "^4.0",
+        "yiisoft/cache": "^3.0",
+        "yiisoft/cache-file": "^3.0",
+        "yiisoft/config": "^1.3",
+        "yiisoft/csrf": "^2.0",
+        "yiisoft/data-response": "^2.0",
+        "yiisoft/definitions": "^3.2",
         "yiisoft/di": "^1.2",
-        "yiisoft/error-handler": "^2.0",
-        "yiisoft/factory": "^1.0",
+        "yiisoft/error-handler": "^3.0",
+        "yiisoft/factory": "^1.1",
         "yiisoft/files": "^2.0",
         "yiisoft/html": "^3.0",
         "yiisoft/http": "^1.2",
         "yiisoft/i18n": "^1.1",
         "yiisoft/log": "^2.0",
-        "yiisoft/log-target-file": "^2.0",
-        "yiisoft/router": "^2.0",
-        "yiisoft/router-fastroute": "^2.0",
-        "yiisoft/translator": "^2.0",
+        "yiisoft/log-target-file": "^3.0",
+        "yiisoft/router": "^3.0",
+        "yiisoft/router-fastroute": "^3.0",
+        "yiisoft/translator": "^3.0",
         "yiisoft/translator-message-php": "^1.1",
-        "yiisoft/view": "^7.0",
-        "yiisoft/yii-console": "^1.3",
-        "yiisoft/yii-event": "^1.0",
+        "yiisoft/view": "^8.0",
+        "yiisoft/yii-console": "^2.0",
+        "yiisoft/yii-event": "^2.0",
         "yiisoft/yii-http": "^1.0",
         "yiisoft/yii-middleware": "dev-master",
-        "yiisoft/yii-runner-console": "^1.0",
-        "yiisoft/yii-runner-http": "^1.0",
-        "yiisoft/yii-view": "^5.0"
+        "yiisoft/yii-runner-console": "^2.0",
+        "yiisoft/yii-runner-http": "^2.0",
+        "yiisoft/yii-view": "^6.0"
     },
     "require-dev": {
         "codeception/c3": "^2.7",
@@ -86,49 +86,7 @@
         "branch-alias": {
             "dev-main": "1.0.x-dev"
         },
-        "config-plugin-options": {
-            "source-directory": "config"
-        },
-        "config-plugin": {
-            "application-params": "?application-params.php",
-            "bootstrap": [
-                "?bootstrap.php"
-            ],
-            "bootstrap-console": [
-                "$bootstrap"
-            ],
-            "bootstrap-web": [
-                "$bootstrap"
-            ],
-            "common": [
-                "common/*.php"
-            ],
-            "console": [
-                "$common",
-                "?console/*.php"
-            ],
-            "events": [
-                "?events.php"
-            ],
-            "events-console": [
-                "$events"
-            ],
-            "events-web": [
-                "$events"
-            ],
-            "params": [
-                "params.php"
-            ],
-            "providers": [
-                "?providers.php"
-            ],
-            "routes": "routes.php",
-            "web": [
-                "$common",
-                "web/*.php"
-            ],
-            "widgets": "widgets.php"
-        }
+        "config-plugin-file": "di-container.php"
     },
     "scripts": {
         "post-create-project-cmd": [
