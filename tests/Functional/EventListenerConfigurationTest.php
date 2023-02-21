@@ -5,26 +5,23 @@ declare(strict_types=1);
 namespace App\Tests\Functional;
 
 use PHPUnit\Framework\TestCase;
-use Psr\Container\ContainerInterface;
-use Yiisoft\Config\ConfigPaths;
-use Yiisoft\Di\Container;
-use Yiisoft\Di\ContainerConfig;
 use Yiisoft\Yii\Event\ListenerConfigurationChecker;
-use Yiisoft\Yii\Runner\ConfigFactory;
+use Yiisoft\Yii\Runner\Console\ConsoleApplicationRunner;
+use Symfony\Component\Console\Event\ConsoleErrorEvent;
 
 use function dirname;
 
-class EventListenerConfigurationTest extends TestCase
+final class EventListenerConfigurationTest extends TestCase
 {
     public function testConsoleListenerConfiguration(): void
     {
-        $config = ConfigFactory::create(new ConfigPaths(dirname(__DIR__, 2), 'config'), null);
-
-        $containerConfig = ContainerConfig::create()
-            ->withDefinitions($config->get('console'));
-        $container = (new Container($containerConfig))->get(ContainerInterface::class);
+        $runner = new ConsoleApplicationRunner(
+            rootPath: dirname(__DIR__, 2),
+            debug: false,
+            checkEvents: false,
+        );
+        $container = $runner->getContainer();
         $checker = $container->get(ListenerConfigurationChecker::class);
-        $checker->check($config->get('events-console'));
 
         self::assertInstanceOf(ListenerConfigurationChecker::class, $checker);
     }
