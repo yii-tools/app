@@ -7,7 +7,6 @@ namespace App\Tests\Functional;
 use PHPUnit\Framework\TestCase;
 use Yiisoft\Yii\Event\ListenerConfigurationChecker;
 use Yiisoft\Yii\Runner\Console\ConsoleApplicationRunner;
-use Symfony\Component\Console\Event\ConsoleErrorEvent;
 
 use function dirname;
 

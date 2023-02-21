@@ -26,7 +26,7 @@ return [
         'routes' => 'routes.php',
 
         // Configuration yii-tools packages
-        "application-params" => "?application-params.php",
+        'application-params' => '?application-params.php',
         'common' => [
             '$di',
             'common/*.php',
