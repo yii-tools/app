@@ -33,7 +33,6 @@ return [
         ],
         'console' => [
             '$common',
-            '$di',
             '$di-console',
         ],
         'web' => [
