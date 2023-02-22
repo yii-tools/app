@@ -1,8 +1,8 @@
 ## Configuration
 
-Yii config is a configuration manager for Yii 3.0. It allows you to configure your application using PHP files. It is based on the [PHP-DI](https://php-di.org/) library.
+Yii config is a configuration manager for [Yii Framework v. 3.0](https://www.yiiframework.com/). It allows you to configure your application using PHP files. It is based on the [PHP-DI](https://php-di.org/) library.
 
-- [configuration](/docs/guide/config.md)
+- [Configuration](/docs/guide/config.md)
 
 ## Customizing app template
 
