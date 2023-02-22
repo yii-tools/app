@@ -23,22 +23,3 @@ return [
 The bootstraping process is defined as an array of callables. Each callable receives the container as a parameter. The container is used to get the services that are needed to initialize the application.
 
 The bootstraping process is executed in the order in which the callables are defined in the array.
-
-Example of [Yii Config](https://github.com/yiisoft/config) usage in `composer.json`:
-
-```json
-{
-    "extra": {
-        "config-plugin": {
-            "bootstrap": "bootstrap.php",
-            "bootstrap-console": [
-                "$bootstrap",
-                "bootstrap-console.php"
-            ],
-            "bootstrap-web": [
-                "$bootstrap",
-                "bootstrap-web.php"
-            ]            
-        }
-    }
-}
