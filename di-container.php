@@ -15,14 +15,8 @@ return [
         'events-web' => ['$events'],
         'events-console' => ['$events'],
         'params' => 'params.php',
-        'params-web' => [
-            '$params',
-            '?web/params.php',
-        ],
-        'params-console' => [
-            '$params',
-            '?console/params.php',
-        ],
+        'params-web' => '$params',
+        'params-console' => '$params',
         'routes' => 'routes.php',
 
         // Configuration yii-tools packages
