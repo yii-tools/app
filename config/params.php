@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Command\Hello;
+use App\Command\Serve;
 use Psr\Log\LogLevel;
 use Yii\Service\ParameterService;
 use Yiisoft\Aliases\Aliases;
@@ -117,6 +118,7 @@ return [
     'yiisoft/yii-console' => [
         'commands' => [
             'hello' => Hello::class,
+            'serve' => Serve::class,
         ],
     ],
 ];
