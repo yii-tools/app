@@ -44,7 +44,8 @@ root
 ├── config                          Configuration files.
 │   └── common                      Common configuration files.
 │   └── web                         Web configuration files.
-│   └── params.php                  Application parameters.
+│   └── application-params.php      Application parameters.
+│   └── params.php                  Params configuration.
 │   └── routes.php                  Application routes.
 |   └── widgets.php                 Widgets configuration.
 ├── public                          Files publically accessible from the Internet.
@@ -62,6 +63,7 @@ root
 │    └── Controller                 Web controller classes.
 │    └── Handler                    Handlers for events.
 |    └── Installer.php              Installer.
+├── di-container.php                Dependency injection container configuration.
 ```
 
 ## Configuration
