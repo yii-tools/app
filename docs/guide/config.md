@@ -37,26 +37,27 @@ declare(strict_types=1);
 return [
     'config-plugin' => [
         // Configuration yiisoft packages
-        'di' => [],
-        'di-console' => [],
-        'di-web' => [],
+        'params' => 'params.php',
+        'params-web' => ['$params'],
+        'params-console' => ['$params'],
+        'di' => [
+            'common/*.php',
+        ],
+        'di-web' => [
+            'web/*.php',
+        ],
+        'di-console' => ['$di'],
         'bootstrap' => [],
         'bootstrap-web' => '$bootstrap',
         'bootstrap-console' => '$bootstrap',
         'events' => [],
         'events-web' => ['$events'],
         'events-console' => ['$events'],
-        'params' => 'params.php',
-        'params-web' => '$params',
-        'params-console' => '$params',
         'routes' => 'routes.php',
 
         // Configuration yii-tools packages
         'application-params' => '?application-params.php',
-        'common' => [
-            '$di',
-            'common/*.php',
-        ],
+        'common' => '$di',
         'console' => [
             '$common',
             '$di-console',
@@ -64,7 +65,6 @@ return [
         'web' => [
             '$common',
             '$di-web',
-            'web/*.php',
         ],
     ],
     'config-plugin-options' => [
