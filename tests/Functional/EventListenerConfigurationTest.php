@@ -19,9 +19,11 @@ final class EventListenerConfigurationTest extends TestCase
             debug: false,
             checkEvents: false,
         );
+        $config = $runner->getConfig();
         $container = $runner->getContainer();
         $checker = $container->get(ListenerConfigurationChecker::class);
+        $checker->check($config->get('events-console'));
 
-        self::assertInstanceOf(ListenerConfigurationChecker::class, $checker);
+        $this->assertInstanceOf(ListenerConfigurationChecker::class, $checker);
     }
 }
