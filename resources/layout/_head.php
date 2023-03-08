@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Yiisoft\Html\Html;
+use Yii\Html\Helper\Encode;
 
 /**
  * @var \App\Service\ParameterService $parameterService
@@ -11,11 +11,11 @@ use Yiisoft\Html\Html;
 ?>
 
 <head>
-    <meta charset="<?= Html::encode($parameterService->get('app.charset')) ?>">
+    <meta charset="<?= Encode::content($parameterService->get('app.charset')) ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><?= Html::encode($this->getTitle()) ?></title>
+    <title><?= Encode::content($this->getTitle()) ?></title>
 
     <?php $this->head() ?>
 </head>

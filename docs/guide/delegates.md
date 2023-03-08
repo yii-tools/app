@@ -1,8 +1,12 @@
 ## Container delegates
 
-Each delegate is a callable returning a container instance that is used in case a service can not be found in primary container. 
+Each delegate is a callable returning a container instance that's used in case a service can not be found in a primary
+container. 
 
-Delegates are defined in `config/delegates.php` file. This file is executed before the application is started. Also you can also define it only for a specific part of the application, for example `console` or `web`, in `config/delegates-console.php` and `config/delegates-web.php` respectively.
+Delegates are defined in `config/delegates.php` file. This file is executed before the application is started. 
+
+Also, you can also define it only for a specific part of the application, for example `console` or `web`, in 
+`config/delegates-console.php` and `config/delegates-web.php` respectively.
 
 The following example shows how to define the delegates:
 

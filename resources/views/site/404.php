@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Yiisoft\Html\Html;
+use Yii\Html\Helper\Encode;
 
 /**
  * @var Yiisoft\View\WebView $this
@@ -21,9 +21,7 @@ $this->setTitle('404');
 
     <p>
         The page
-        <strong><?= Html::encode($currentRoute
-                ->getUri()
-                ->getPath()) ?></strong>
+        <strong><?= Encode::content($currentRoute->getUri()->getPath()) ?></strong>
         not found.
     </p>
 

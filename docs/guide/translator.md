@@ -1,6 +1,8 @@
 ## Translator
 
-The [Yii Message Translator](https://github.com/yiisoft/translator) allows translating messages into several languages. It can work with both [Yii Framework](https://www.yiiframework.com/) applications and standalone PHP applications.
+The [Yii Message Translator](https://github.com/yiisoft/translator) allows translating messages into several languages.
+
+It can work with both [Yii Framework](https://www.yiiframework.com/) applications and standalone PHP applications.
 
 The following example shows how to create configuration for the translator, using [Yii Message Translator](https://github.com/yiisoft/translator) package:
 
@@ -55,7 +57,7 @@ messages
     └── app.php
 ```
 
-The `app.php` ru file contains the following:
+The `app.php` ru file has the following:
 
 ```php
 <?php
@@ -83,7 +85,7 @@ return [
 ];
 ```
 
-The `yiisoft/translator` array contains the following keys:
+The `yiisoft/translator` array has the following keys:
 
 - `locale` - the locale that should be used by default. The default value is `en`.
-- `fallbackLocale` - the locale that should be used if the message translation is not available. The default value is `en`.
+- `fallbackLocale` - the locale that should be used if the message translation isn't available. The default value is `en`.

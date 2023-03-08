@@ -1,8 +1,11 @@
 ## Application parameters
 
-This [ParameterService.php](https://github.com/yii-tools/service/blob/main/src/ParameterService.php) allows you to globally configure some important parameters of your application, such as `name` and `charset`, you could also add any parameter you need.
+This [ParameterService.php](https://github.com/yii-tools/service/blob/main/src/ParameterService.php) allows you
+to globally configure some important parameters of your application, such as `name` and `charset`, you could also add
+any parameter you need.
 
-The parameters are defined in the file [config/application-params.php](/config/application-params.php) and avaible in the app, in controllers, actions as a dependency and in the views.
+The parameters are defined in the file [config/application-params.php](/config/application-params.php) and available in the app,
+in controllers, actions as a dependency and in the views.
 
 file: config/application-params.php
 ```php
@@ -40,7 +43,8 @@ final class MyAction
 
 Automatically the container resolves the dependency and accesses the parameters.
 
-Now we are going to configure the parameters in the view component, for this we will add the following code to the file [config/params.php](/config/params.php).
+Now we're going to configure the parameters in the view part, for this we will add the following code to the file
+[config/params.php](/config/params.php).
 
 file: config/params.php
 ```php
