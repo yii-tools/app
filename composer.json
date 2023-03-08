@@ -104,11 +104,5 @@
             "./yii serve"
         ],
         "test": "codecept run"
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../contact-form"
-        }
-    ]
+    }
 }
