@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Yiisoft\Html\Html;
+use Yii\Html\Helper\Encode;
 
 /**
  * @var App\Service\ParameterService $parameterService
@@ -13,7 +13,7 @@ use Yiisoft\Html\Html;
 <div class="footer">
     <div class="footer_copyright">
         <a href="https://www.yiiframework.com/" target="_blank" rel="noopener">
-            © <?= date('Y') ?>  <?= Html::encode($parameterService->get('app.name')) ?>
+            © <?= date('Y') ?>  <?= Encode::content($parameterService->get('app.name')) ?>
         </a>
     </div>
     <div class="footer_icons">

@@ -1,10 +1,19 @@
 ## Service provider
 
-A service provider is a special class that is responsible for providing complex services or groups of dependencies for the container and extensions of existing services.
+A service provider is a special class that's responsible for providing complex services or groups of dependencies for
+the container and extensions of existing services.
 
-A provider should extend from `Yiisoft\Di\ServiceProviderInterface::class` and must contain a `getDefinitions()` and `getExtensions()` methods. It should only provide services for the container and therefore should only contain code that is related to this task. It should never implement any business logic or other functionality such as environment bootstrap or applying changes to database.
+A provider should extend from `Yiisoft\Di\ServiceProviderInterface::class` and must contain a `getDefinitions()` and 
+`getExtensions()` methods. 
 
-In the application are defined in the file `config\providers.php` which is available throughout the application, you can also define it only for a specific part of the application, for example `console` or `web`, in `config\providers-console.php` and `config\providers-web.php` respectively.
+It should only give services for the container and therefore should only contain code that's related to this task.
+
+It should never implement any business logic or other functionality such as environment bootstrap or applying changes to
+a database.
+
+In the application are defined in the file `config\providers.php` which is available throughout the application, you can
+also define it only for a specific part of the application, for example `console` or `web`, in `config\providers-console.php`
+and `config\providers-web.php` respectively.
 
 The following example shows how to define a service provider in `config\providers.php` file:
 

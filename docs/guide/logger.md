@@ -1,6 +1,10 @@
 ## Logging 
 
-The [Yii Logging Library](https://github.com/yiisoft/log) is used to log messages. This package provides [PSR-3](https://www.php-fig.org/psr/psr-3/) compatible logging library, it is a simple and flexible logging library that supports multiple log targets.
+The [Yii Logging Library](https://github.com/yiisoft/log) is used to log messages.
+
+This package provides [PSR-3](https://www.php-fig.org/psr/psr-3/) compatible logging library.
+
+It's a simple and flexible logging library that supports many log targets.
 
 Each target may filter messages by their severity levels and categories and then export them to some medium such as file, email or syslog.
 
@@ -63,7 +67,7 @@ return [
 ];
 ```
 
-The `yiisoft/log-target-file` array contains the following keys:
+The `yiisoft/log-target-file` array has the following keys:
 
 - `fileTarget` - an array of file target. The key is the file target class, the value is the file target configuration.
     - `file` - The file path. For default, the file path is `@runtime/logs/app.log`.
@@ -72,7 +76,7 @@ The `yiisoft/log-target-file` array contains the following keys:
     - `dirMode` - The permission to be set for newly created directories. For default, the permission is `0755`.
     - `fileMode` - The permission to be set for newly created files. For default, the permission is `null`.
 - `fileRotator` - an array of file rotator. The key is the file rotator class, the value is the file rotator configuration.
-    - `maxFileSize` - The maximum size of log file in kilo-bytes. If the size of the log file exceeds this limit, a rotation will be performed. For default, the maximum size of  log file is `10240`.
+    - `maxFileSize` - The maximum size of log file in kilobytes. If the size of the log file exceeds this limit, a rotation will be performed. For default, the maximum size of log file is `10240`.
     - `maxFiles` - The maximum number of log files that will be kept. For default, the maximum number of log files is `5`.
     - `fileMode` - The permission to be set for newly created files. For default, the permission is `null`.
     - `compressRotatedFiles` - Whether to compress rotated files using gzip. For default, the compression is `false`.

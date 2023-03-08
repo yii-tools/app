@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 use App\Asset\AppAsset;
-use Yiisoft\Html\Html;
 use Yiisoft\I18n\Locale;
+use Yii\Html\Helper\Encode;
 
 /**
  * @var App\Service\ParameterService $parameterService
@@ -29,7 +29,7 @@ $this->addJsVars($assetManager->getJsVars());
 
 <?php $this->beginPage()?>
     <!DOCTYPE html>
-    <html lang="<?= Html::encode($locale->language()) ?>">
+    <html lang="<?= Encode::content($locale->language()) ?>">
         <?= $this->render('_head', ['parameterService' => $parameterService]) ?>
         <?= $this->render('_header') ?>
         <body class="flex flex-col h-screen" style="justify-content: space-between;">

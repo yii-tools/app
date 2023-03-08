@@ -2,8 +2,8 @@
     <a href="https://github.com/yii-tools/app" target="_blank">
         <img src="https://avatars.githubusercontent.com/u/121752654?s=200&v=4" height="100px">
     </a>
-    <h1 align="center">Application Template for YiiFramework v. 3.0.</h1>
-    <h3 align="center">The best for rapidly creating projects.</h3>
+    <h1 align="center">Application Template for YiiFramework v 3.0.</h1>
+    <h3 align="center">The best for creating projects</h3>
     <br>
 </p>
 
@@ -15,9 +15,9 @@
 
 ## Requirements
 
-The minimun version of PHP required by this package is PHP 8.1.
+The minimum version of PHP required by this package is PHP 8.1.
 
-For install this package, you need [composer](https://getcomposer.org/).
+To install this package, you need a [composer](https://getcomposer.org/).
 
 ## Installation
 
@@ -27,7 +27,7 @@ You can then install this project template using the following command:
 composer create-project --prefer-dist --stability=dev yii-tools/app <your project>
 ```
 
-In order to launch development web server run:
+To launch development web server run:
 
 ```
 composer run serve
@@ -47,8 +47,7 @@ root
 │   └── application-params.php      Application parameters.
 │   └── params.php                  Params configuration.
 │   └── routes.php                  Application routes.
-|   └── widgets.php                 Widgets configuration.
-├── public                          Files publically accessible from the Internet.
+├── public                          Files publicly accessible from the Internet.
 │   └── assets                      Published assets.
 │   └── index.php                   Entry script.
 ├── resources                       Application resources.
@@ -106,7 +105,7 @@ composer run test
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
 
 ## Our social networks
 

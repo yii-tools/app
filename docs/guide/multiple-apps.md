@@ -1,10 +1,12 @@
-## Multiple applications with `Subfolder::class` middleware
+## Many applications with `Subfolder::class` middleware
 
 If you want to use subfolder middleware for URL routing, you need to adjust `config/params.php` file.
 
-For our example let's assume that web server root is pointing to the all projects root. There is `yii3` project with its `yii3/public` directory that should be accessed as `http://localhost/yii3/public`.
+For our example, let's assume that web server root is pointing to the all-projects root.
 
-> Note: While being a common practice for local development, it is recommended to prefer separate hosts for separate projects pointint directly to `public` directory.
+There is `yii3` project with its `yii3/public` directory that should be accessed as `http://localhost/yii3/public`.
+
+> Note: While being a common practice for local development, it's recommended to prefer separate hosts for separate projects pointing directly to `public` directory.
 
 Here's how `config/params.php` should be adjusted, add prefix to `app` config:
 

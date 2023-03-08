@@ -1,8 +1,10 @@
 ## Routing
 
-The [Yii Router](https://github.com/yiisoft/router) is the main entry point for the application. It is responsible for matching the incoming request to a route and dispatching the request to the appropriate controller.
+The [Yii Router](https://github.com/yiisoft/router) is the main entry point for the application.
 
-The following example shows how to create configuration for the [Yii Router](https://github.com/yiisoft/router):
+It's responsible for matching the incoming request to a route and dispatching the request to the appropriate controller.
+
+The following example shows how to create a configuration for the [Yii Router](https://github.com/yiisoft/router):
 
 ```php
 <?php
@@ -32,7 +34,9 @@ return [
 ];
 ```
 
-The `$config->get('routes')` statement is used to get the routes from the `routes` configuration file. The `routes` configuration file is located in the `config` directory and contains the following code:
+The `$config->get('routes')` statement is used to get the routes from the `routes` configuration file.
+
+The `routes` configuration file is located in the `config` directory and has the following code:
 
 ```php
 <?php
@@ -47,9 +51,12 @@ return [
 ];
 ```
 
-The `Route::get('/')` statement creates a route that matches the `GET` request to the `/` path. The `action()` method specifies the action that should be executed when the route is matched. The `name()` method specifies the name of the route. The name of the route is used to generate URLs.
+- `Route::get('/')` statement creates a route that matches the `GET` request to the `/` path.
+- `action()` method specifies the action that should be executed when the route is matched.
+- `name()` method specifies the name of the route. The name of the route is used to generate URLs.
+- `routes` configuration file can contain many routes. The routes can be grouped into groups.
 
-The `routes` configuration file can contain multiple routes. The routes can be grouped into groups. The following example shows how to create a group of routes:
+The following example shows how to create a group of routes.
 
 ```php
 <?php

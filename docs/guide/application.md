@@ -1,9 +1,11 @@
 ## Application
 
-The [Yii HTTP Application](https://github.com/yiisoft/yii-http) provides the `Application::class`, as well as the events and handlers needed to interact with HTTP. The package is implemented using [PSR-7](https://www.php-fig.org/psr/psr-7/) and [PSR-15](https://www.php-fig.org/psr/psr-15/) standards.
+The [Yii HTTP Application](https://github.com/yiisoft/yii-http) provides the `Application::class`, as well as the events
+and handlers needed to interact with HTTP.
 
+The package is implemented using [PSR-7](https://www.php-fig.org/psr/psr-7/) and [PSR-15](https://www.php-fig.org/psr/psr-15/) standards.
 
-The following example shows how to create configuration for the Appl, using [Yii HTTP Application](https://github.com/yiisoft/yii-http) package:
+The following example shows how to create configuration for the application, using a [Yii HTTP Application](https://github.com/yiisoft/yii-http) package.
 
 ```php
 <?php
@@ -40,11 +42,13 @@ return [
 ];
 ```
 
-The `Application` class is a [PSR-15](https://www.php-fig.org/psr/psr-15/) middleware. It is used to dispatch the middleware stack and handle the request. The `Application` class is configured with a `dispatcher` and a `fallbackHandler`. The `dispatcher` is a [PSR-15](https://www.php-fig.org/psr/psr-15/) middleware that dispatches the middleware stack. The `fallbackHandler` represents the handler that will be called if no other handler is found.
+- `Application::class` is a [PSR-15](https://www.php-fig.org/psr/psr-15/) middleware. It's used to dispatch the middleware
+stack and handle the request.
+- `Locale::class` is a [PSR-15](https://www.php-fig.org/psr/psr-15/) middleware that sets the locale based on the
+request. It's configured with a list of supported locales and a list of ignored requests.
 
-The `Locale` class is a [PSR-15](https://www.php-fig.org/psr/psr-15/) middleware that sets the locale based on the request. It is configured with a list of supported locales and a list of ignored requests. The `Locale` middleware is used to set the locale for the request. It is configured with a list of supported locales and a list of ignored requests.
-
-The application is configured section of the [params](https://github.com/yii-tools/app/blob/main/config/params.php) configuration file:
+The [params](https://github.com/yii-tools/app/blob/main/config/params.php) file has the configuration for the
+application.
 
 ```php
 <?php

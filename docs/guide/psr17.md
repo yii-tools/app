@@ -1,6 +1,8 @@
 ## Http Factories
 
-The [PSR-17](https://www.php-fig.org/psr/psr-17/) specification defines interfaces for HTTP factories. These factories are used to create PSR-7 objects.
+The [PSR-17](https://www.php-fig.org/psr/psr-17/) specification defines interfaces for HTTP factories.
+
+These factories are used to create PSR-7 objects.
 
 The following example shows how to create configuration for the HTTP factories, using the [httpsoft/http-message](https://github.com/httpsoft/http-message) package:
 
@@ -57,4 +59,4 @@ return [
 ];
 ```
 
-Both packages provide the same interfaces, so you can use any of them.
+Both packages give the same interfaces, so you can use any of them.

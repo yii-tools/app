@@ -1,6 +1,6 @@
 ## Yii config
 
-Specifies the way to assemble the configuration for the [PHP-DI](https://php-di.org/) container for the application.
+Specifies the way to assemble the configuration for the [Yii Dependency Injection](https://github.com/yiisoft/di) container for the application.
 
 For default application template, the configuration is located in the `config/` directory. The Yii packages are configured under the following standard:
 
